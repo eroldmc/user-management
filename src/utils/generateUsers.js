@@ -14,4 +14,4 @@ const user = Array.from({ length: 1000 }, (index) => ({
     avatar: faker.image.personPortrait(),
 }));
 
-fs.writeFileSync('user.json', JSON.stringify(user, null, 2));
+fs.writeFileSync('data/user.json', JSON.stringify(user, null, 2));
