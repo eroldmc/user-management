@@ -2,7 +2,7 @@
 import fs from 'fs';
 import { faker } from '@faker-js/faker';
 
-const user = Array.from({ length: 1000 }, (index) => ({
+const users = Array.from({ length: 1000 }, () => ({
     id: crypto.randomUUID(),
     firstname: faker.person.firstName(),
     lastname: faker.person.lastName(),
@@ -14,4 +14,4 @@ const user = Array.from({ length: 1000 }, (index) => ({
     avatar: faker.image.personPortrait(),
 }));
 
-fs.writeFileSync('data/user.json', JSON.stringify(user, null, 2));
+fs.writeFileSync('data/user.json', JSON.stringify({users}, null, 2));
