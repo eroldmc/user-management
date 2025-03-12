@@ -67,6 +67,16 @@ npm run start:full
 
 ---
 
+## 🧪 Test unitaire
+
+✅ **Couverture de tests unitaires** pour le composant principal `(user-list.component) `
+
+```bash
+npm run test
+```
+
+---
+
 ## 🔥 Scripts utiles
 
 | Commande                 | Description |
