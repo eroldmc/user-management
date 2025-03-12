@@ -7,15 +7,15 @@ import { TranslateModule } from '@ngx-translate/core';
 import { of } from 'rxjs';
 import { User } from '../../../../core/models/user.interface';
 import { UserService } from '../../services/user.service';
-import { MatDialog } from '@angular/material/dialog';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { signal } from '@angular/core';
 import { UserListColumn } from '../../../../core/enums/user-list-column.enum';
 import { SortDirection } from '../../../../core/enums/column-sort-direction.enum';
 
 class MockUserService {
   private _users = signal<User[]>([
-    { id: '1', uuid: 'uuid-1', firstname: 'John', lastname: 'Doe', fullname: 'John Doe',  email: 'john.doe@example.com', phone: '1234567890', address: '123 Main St', city: 'Anytown', country: 'USA', avatar: 'https://randomuser.me/api/portraits/men/1.jpg' },
-    { id: '2', uuid: 'uuid-2', firstname: 'Jane', lastname: 'Doe', fullname: 'Jane Doe' , email: 'jane.doe@example.com', phone: '0987654321', address: '456 Elm St', city: 'Othertown', country: 'USA', avatar: 'https://randomuser.me/api/portraits/women/2.jpg' }
+    { id: '1', uuid: 'uuid-1', firstname: 'John', lastname: 'Doe', fullname: 'John Doe', email: 'john.doe@example.com', phone: '1234567890', address: '123 Main St', city: 'Anytown', country: 'USA', avatar: 'https://randomuser.me/api/portraits/men/1.jpg' },
+    { id: '2', uuid: 'uuid-2', firstname: 'Jane', lastname: 'Doe', fullname: 'Jane Doe', email: 'jane.doe@example.com', phone: '0987654321', address: '456 Elm St', city: 'Othertown', country: 'USA', avatar: 'https://randomuser.me/api/portraits/women/2.jpg' }
   ]);
 
   private _displayableColumns = signal(new Map<UserListColumn, boolean>([
@@ -27,11 +27,14 @@ class MockUserService {
 
   users = () => this._users();
   isLoading = () => false;
+  totalItems = () => 2;
+  nextPage = () => null;
   sortedColumn = () => new Map<UserListColumn, SortDirection>([[UserListColumn.ID, SortDirection.ASC]]);
   getAvailableColumns = () => Array.from(this._displayableColumns().keys());
   getDisplayedColumns = () => Array.from(this._displayableColumns())
     .filter(([_, isVisible]) => isVisible)
     .map(([column]) => column);
+  errorOccurred = () => false;
   loadUsers = jasmine.createSpy('loadUsers');
   deleteUser = jasmine.createSpy('deleteUser');
   updateUser = jasmine.createSpy('updateUser');
@@ -92,6 +95,9 @@ describe('UserListComponent', () => {
   });
 
   it('should call `deleteUser` when `deleteUser` is called', () => {
+    spyOn(dialog, 'open').and.returnValue({
+      afterClosed: () => of(true)
+    } as MatDialogRef<any>);
     component.deleteUser('1');
     expect(userService.deleteUser).toHaveBeenCalledWith('1');
   });
