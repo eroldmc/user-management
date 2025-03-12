@@ -115,7 +115,6 @@
               }
             ],
             "styles": [
-              "src/styles/_theme-colors.scss",
               "src/styles.scss"
             ],
             "scripts": []
