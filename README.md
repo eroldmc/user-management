@@ -1,59 +1,77 @@
-# UserManagement
+# 🏆 User Management - Angular App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.1.
+> **📌 Exercice technique**  
+> Application de gestion d'utilisateurs avec **scroll infini, édition de profils et gestion avancée des erreurs**.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🚀 Introduction
 
-```bash
-ng serve
-```
+Ce projet est une **application Angular** permettant de gérer une liste d’utilisateurs avec les fonctionnalités suivantes :
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+✅ **Scroll infini** : Chargement progressif des utilisateurs au fur et à mesure du défilement.  
+✅ **Édition de profil** : Modification des informations utilisateur via une **modale**.  
+✅ **Gestion des erreurs** : Simulation d'erreurs aléatoires (**20%**).  
+✅ **Optimisation des performances** : Utilisation de **Angular Signals**, `MutationObserver`, et `IntersectionObserver`.  
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+## 📦 Technologies utilisées
 
-```bash
-ng generate component component-name
-```
+| Technologie         | Utilisation |
+|---------------------|-------------|
+| **Angular 19**      | Framework principal |
+| **Angular Signals** | Gestion efficace des états |
+| **Angular Material** | UI moderne et fluide |
+| **RxJS**           | Gestion des flux asynchrones |
+| **Json-server**    | Simulation d'une API REST |
+| **Faker.js**       | Génération de faux utilisateurs |
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
 
-```bash
-ng generate --help
-```
+## 🛠 Installation et exécution
 
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+### 1️⃣ Cloner le projet
 
 ```bash
-ng test
+git clone https://github.com/eroldmc/user-management.git
+cd user-management
 ```
 
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
+### 2️⃣ Installer les dépendances
 
 ```bash
-ng e2e
+npm install
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+### 3️⃣ Démarrer l'application et le serveur JSON  
+💡 Une seule commande pour **tout lancer** 🚀 :
 
-## Additional Resources
+```bash
+npm run start:full
+```
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+📌 **Ce que fait cette commande :**
+- Vérifie si le fichier `data/users.json` existe, sinon il le génère.
+- Démarre **json-server** (`http://localhost:3000/users`).
+- Lance **l'application Angular** (`http://localhost:4200`).
+
+---
+
+## 🚀 Optimisations et bonnes pratiques
+
+✅ **Utilisation des Angular Signals** pour une gestion d'état réactive et performante.  
+✅ **Lazy Loading** des modules et composants pour un chargement plus rapide.  
+✅ **Réduction du DOM recalculé** grâce à `@for` au lieu de `*ngFor`.  
+✅ **Code propre et modulaire** pour faciliter la maintenance et l'évolution du projet.  
+
+---
+
+## 🔥 Scripts utiles
+
+| Commande                 | Description |
+|--------------------------|-------------|
+| `npm run start:full`     | **Démarre** l’application + l'API (`json-server`) |
+| `npm run generate:users` | Génère des utilisateurs fictifs (`data/users.json`) |
+| `npm run start`          | Lancer **uniquement** l’application Angular |
+| `npm run json-server`    | Lancer **uniquement** le serveur JSON |
