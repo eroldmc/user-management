@@ -1,0 +1,60 @@
+{
+  "APP": {
+    "TITLE": "Gestion des utilisateurs",
+    "LOADING": "Chargement...",
+    "ERROR": "Erreur lors du chargement des données.",
+    "DELETE": "Supprimer",
+    "EDIT": "Modifier",
+    "ADD": "Ajouter",
+    "YES": "Oui",
+    "NO": "Non",
+    "CONFIRM_DELETE": "Êtes-vous sûr de vouloir supprimer cet utilisateur?",
+    "CONFIRM": "Confirmer",
+    "CANCEL": "Annuler",
+    "ENGLISH": "Anglais",
+    "FRENCH": "Français"
+  },
+  "USER_LIST": {
+    "USERS": "Utilisateurs",
+    "TOGGLE_COLUMNS": " 🛠️ Afficher/Masquer les colonnes ",
+    "SEARCH_USER": "🔍 Rechercher un utilisateur...",
+    "EMPTY_LIST": "Aucun utilisateur trouvé.",
+    "DELETE_USER": "Supprimer l'utilisateur",
+    "DELETE_USER_CONFIRMATION": "Êtes-vous sûr de vouloir supprimer cet utilisateur?",
+    "ID": "ID",
+    "FIRSTNAME": "Prénom",
+    "LASTNAME": "Nom de famille",
+    "FULLNAME": "Nom complet",
+    "EMAIL": "Email",
+    "PHONE": "Téléphone",
+    "CITY": "Ville",
+    "STATE": "État",
+    "ZIP": "Code postal",
+    "COUNTRY": "Pays",
+    "ADDRESS": "Adresse"
+  },
+  "USER_FORM": {
+    "ADD_USER": "Ajouter un utilisateur",
+    "EDIT_USER": "Modifier l'utilisateur",
+    "SAVE": "Sauvegarder",
+    "CANCEL": "Annuler",
+    "REQUIRED": "Requis",
+    "INVALID_EMAIL": "Email invalide",
+    "INVALID_PHONE": "Téléphone invalide",
+    "INVALID_ZIP": "Code postal invalide",
+    "INVALID_COUNTRY": "Pays invalide"
+  },
+  "ERROR": {
+    "TITLE": "Erreur",
+    "MESSAGE": "Une erreur s'est produite",
+    "CLOSE": "Fermer",
+    "UNKNOWN": "Une erreur inconnue s'est produite",
+    "CLIENT": "Une erreur côté client s'est produite",
+    "BAD_REQUEST": "Mauvaise requête",
+    "UNAUTHORIZED": "Non autorisé",
+    "FORBIDDEN": "Interdit",
+    "NOT_FOUND": "Non trouvé",
+    "SERVER": "Erreur serveur",
+    "RANDOM": "Erreur aléatoire"
+  }
+}

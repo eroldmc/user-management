@@ -1,0 +1,60 @@
+{
+  "APP": {
+    "TITLE": "User Management",
+    "LOADING": "Loading...",
+    "ERROR": "Error loading data.",
+    "DELETE": "Delete",
+    "EDIT": "Edit",
+    "ADD": "Add",
+    "YES": "Yes",
+    "NO": "No",
+    "CONFIRM_DELETE": "Are you sure you want to delete this user?",
+    "CONFIRM": "Confirm",
+    "CANCEL": "Cancel",
+    "ENGLISH": "English",
+    "FRENCH": "French"
+  },
+  "USER_LIST": {
+    "USERS": "Users",
+    "TOGGLE_COLUMNS": " 🛠️ Show/Hide columns ",
+    "SEARCH_USER": "🔍 Search for a user...",
+    "EMPTY_LIST": "No users found",
+    "DELETE_USER": "Delete User",
+    "DELETE_USER_CONFIRMATION": "Are you sure you want to delete this user?",
+    "ID": "ID",
+    "FIRSTNAME": "First Name",
+    "LASTNAME": "Last Name",
+    "FULLNAME": "Full Name",
+    "EMAIL": "Email",
+    "PHONE": "Phone",
+    "CITY": "City",
+    "STATE": "State",
+    "ZIP": "Zip",
+    "COUNTRY": "Country",
+    "ADDRESS": "Address"
+  },
+  "USER_FORM": {
+    "ADD_USER": "Add User",
+    "EDIT_USER": "Edit User",
+    "SAVE": "Save",
+    "CANCEL": "Cancel",
+    "REQUIRED": "Required",
+    "INVALID_EMAIL": "Invalid email",
+    "INVALID_PHONE": "Invalid phone",
+    "INVALID_ZIP": "Invalid zip",
+    "INVALID_COUNTRY": "Invalid country"
+  },
+  "ERROR": {
+    "TITLE": "Error",
+    "MESSAGE": "An error occurred",
+    "CLOSE": "Close",
+    "UNKNOWN": "An unknown error occurred",
+    "CLIENT": "A client-side error occurred",
+    "BAD_REQUEST": "Bad request",
+    "UNAUTHORIZED": "Unauthorized",
+    "FORBIDDEN": "Forbidden",
+    "NOT_FOUND": "Not found",
+    "SERVER": "Server error",
+    "RANDOM": "Random Error"
+  }
+}
