@@ -1,0 +1,7 @@
+<h2 mat-dialog-title>❌ {{ 'ERROR.TITLE' | translate }}</h2>
+<mat-dialog-content>
+    <p>{{ data.message }}</p>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <app-mf-button (click)="close()" [label]="'ERROR.CLOSE' | translate "></app-mf-button>
+</mat-dialog-actions>
