@@ -1,0 +1,26 @@
+<div class="mf-select" (click)="toggleDropdown()">
+    <div class="mf-select-label">
+        {{ label | translate }}
+    </div>
+    <div class="mf-select-icon">
+        <mat-icon fontIcon="arrow_drop_down"></mat-icon>
+    </div>
+    <ul class="mf-select-options" *ngIf="isOpen()">
+        @if(multiple) {
+        @for (option of options; track option) {
+        <li class="mf-select-option" (click)="toggleOption(option)">
+            <input type="checkbox" [checked]="isSelected(option)" />
+            {{translateKey ? getTranslatedOption(option): option}}
+        </li>
+
+        }
+        } @else {
+        @for (option of options; track option) {
+        <li class="mf-select-option" (click)="toggleOption(option)">
+            {{translateKey ? getTranslatedOption(option): option}}
+        </li>
+        }
+        }
+
+    </ul>
+</div>
