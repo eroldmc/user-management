@@ -1,0 +1,67 @@
+button {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    i {
+      font-size: 18px;
+    }
+  
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  
+  /* 🎨 Boutons par type */
+  .primary {
+    background-color: var(--mat-sys-primary);
+    color: var(--mat-sys-surface);
+    border: 1px solid var(--mat-sys-outline);
+  }
+  
+  .secondary {
+    background-color: var(--mat-sys-secondary);
+    color: var(--mat-sys-surface);
+    border: 1px solid var(--mat-sys-outline);
+  }
+  
+  .danger {
+    background-color: #d32f2f;
+    color: white;
+  }
+
+  .rounded {
+    border-radius: 25% / 50%;
+  }
+  
+  /* 🖼️ Bouton Icône */
+  .icon {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: inherit;
+  }
+  
+  /* ⏳ Loader */
+  .loader {
+    width: 16px;
+    height: 16px;
+    border: 3px solid white;
+    border-top: 3px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  

@@ -1,0 +1,15 @@
+<button [class]="type" [disabled]="disabled" icon (click)="handleClick()">
+
+    @if (icon) {
+        <mat-icon [fontIcon]="icon"></mat-icon>
+    }
+  
+    @if (label) {
+      <span>{{ label }}</span>
+    }
+  
+    @if (loading) {
+      <span class="loader"></span>
+    }
+  
+  </button>
