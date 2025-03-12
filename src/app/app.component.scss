@@ -1,0 +1,16 @@
+.app-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+
+.theme-toggle mat-icon {
+    vertical-align: middle;
+    margin: 2px;
+}
+
+.language-toggle mat-button-toggle-group{
+    height: 30px;
+    align-items: center;
+}
